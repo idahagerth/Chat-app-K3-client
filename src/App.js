@@ -32,8 +32,8 @@ function App() {
       borderRadius: "2px",
     };
 
-    socket = io("https://chat-app-server-ida.herokuapp.com");
-
+    socket = io("https://chat-app-server-ida.herokuapp.com", {transports: ['websocket', 'polling', 'flashsocket']});
+  
     socket.on("connect", () => {
       console.log("Connected to server");
     });
