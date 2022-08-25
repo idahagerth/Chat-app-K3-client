@@ -32,7 +32,7 @@ function App() {
       borderRadius: "2px",
     };
 
-    socket = io("localhost:4000");
+    socket = io("https://chat-app-server-ida.herokuapp.com");
 
     socket.on("connect", () => {
       console.log("Connected to server");
